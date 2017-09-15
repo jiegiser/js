@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        #div1 {
+            background: burlywood;
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel panel-heading panel-primary el-icon-circle-check">第一节，鼠标的onmouseout，onmousemove事件<button class="btn btn-default" style="float: right; padding: 2px 10px;"><a href="index.html">首页</a></button></div>
+            <div class="panel-body" style="height: 800px">
+                <label onmousemove="document.getElementById('div1').style.display='block';" onmouseout="document.getElementById('div1').style.display='none'"><input type="input">登录</label>
+                <div id="div1">这里是一个div</div>
+                <br/>
+                <hr>
+                <div class="panel panel-heading panel-primary">函数解释:</div>
+                <hr>
+                <p class="p">这里实现的是鼠标移动到登录上，显示一个div，当鼠标移除后，div消失。 使用onmousemove事件，
+                    <br> 使用onmouseout函数，当鼠标移出Input标签时，div消失。
+                </p>
+
+            </div>
+            <div class="panel-footer">
+                <p>Design by jiegiser <a href="http://www.jiegiser.win" target="_blank">jiegiser</a>jiegiser</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
