@@ -9,38 +9,51 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <style>
         #div1 {
-            background: burlywood;
-            width: 200px;
-            height: 200px;
-            display: none;
+            width: 100px;
+            height: 100px;
+            background: red;
+            display: block;
         }
     </style>
+    <script type="text/javascript">
+        function toGreen() {
+            var oDiv1 = document.getElementById('div1');
+            oDiv1.style.width = '200px;';
+            oDiv1.style.height = '200px';
+            oDiv1.style.background = 'green';
+
+        }
+
+        function toRed() {
+            var oDiv1 = document.getElementById('div1');
+            oDiv1.style.width = '100px';
+            oDiv1.style.height = '100px';
+            oDiv1.style.background = 'red';
+        }
+    </script>
 </head>
 
 <body>
+
     <div class="container">
         <div class="panel panel-primary">
-            <div class="panel panel-heading panel-primary el-icon-circle-check">第一节，鼠标的onmouseout，onmousemove事件<button class="btn btn-default" style="float: right; padding: 2px 10px;"><a href="index.html">首页</a></button></div>
+            <div class="panel panel-heading panel-primary el-icon-circle-check">第二节，鼠标的onmouseout，onmousemove事件改变div的样式<button class="btn btn-default" style="float: right; padding: 2px 10px;"><a href="index.html">首页</a></button></div>
             <div class="panel-body" style="height: 800px">
-                <div style="display: block">
-                    <label style="display: block;font-size: 22px">可以换肤的提交框:  <button class="btn btn-default">皮肤1</button>
-                        <button class="btn btn-default">皮肤2</button></div></label>
-                    <hr>
-                    <div> 输入姓名：</div><input class="input-group" type="input">
-                    <label class="label">输入密码：<input class="input-group" type="input"></label>
-                    <label class="label">请您留言<div style="width: 100px; height: 50px; background: blanchedalmond"></div></label>
-                    <br/>
-                    <hr>
-                    <div class="panel panel-heading panel-primary">函数解释:</div>
-                    <hr>
-
-
+                <div id="div1" onmouseover="toGreen()" onmouseout="toRed()">
                 </div>
-                <div class="panel-footer">
-                    <p>Design by jiegiser <a href="http://www.jiegiser.win" target="_blank">jiegiser</a>jiegiser</p>
-                </div>
+                <br/>
+                <hr>
+                <div class="panel panel-heading panel-primary">函数解释:</div>
+                <hr> 使用 onmouseover="toGreen()" onmouseout="toRed()"，调用toGreen()以及toRed()函数，
+                <br> 这里个函数 function toGreen() { var oDiv1 = document.getElementById('div1'); oDiv1.style.width = '200px;'; oDiv1.style.height = '200px'; oDiv1.style.background = 'green'; } function toRed() { var oDiv1 = document.getElementById('div1');
+                oDiv1.style.width = '100px'; oDiv1.style.height = '100px'; oDiv1.style.background = 'red'; }
+                <br> 用于改变div的颜色以及大小
+            </div>
+            <div class="panel-footer" style="text-align: center">
+                <p>Design by jiegiser <a href="http://www.jiegiser.win" target="_blank">jiegiser</a>jiegiser</p>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
