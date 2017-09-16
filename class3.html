@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css1.css" id="link1">
+    <style>
+        #div1 {
+            background: burlywood;
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel panel-heading panel-primary el-icon-circle-check">第三节，网页的换肤<button class="btn btn-default" style="float: right; padding: 2px 10px;"><a href="index.html">首页</a></button></div>
+            <div class="panel-body" style="height: 1000px">
+                <dl id="message">
+                    <form>
+                        <dt>
+                                    <strong>可以换肤的提交框：</strong>
+                                    <input id="btn1" type="button" value="皮肤1" onclick="document.getElementById('link1').href='css/css1.css';" />
+                                    <input id="btn2" type="button" value="皮肤2" onclick="document.getElementById('link1').href='css/css2.css';" />
+                                </dt>
+                        <dd>输入姓名：<input class="text" type="text" /></dd>
+                        <dd>输入密码：<input class="text" type="password" /></dd>
+                        <dd>请您留言：<textarea></textarea></dd>
+                        <dd class="center"><input class="btn" type="submit" value="提交" /></dd>
+                    </form>
+                </dl>
+
+                <br/>
+                <hr>
+                <div class="panel panel-heading panel-primary">函数解释:</div>
+                <hr> 换肤按钮添加了onclick事件，是当鼠标点击按钮时，发生onclick事件。
+                <br> 可以使用点击按钮改变link标签的herf值。
+                <hr> CSS中background:url(图片) 不能显示的问题 刚刚碰到一个奇怪的问题，这样一段CSS代码： 1 .pho6 { background: url(img/pho6.jpg); } 这段代码居然不能显示出背景图片,路经绝对是没错的 代码肯定没有问题，俄,百度了好久终于让我给找到了 真正的问题在哪？ 在url(imagepath)里的这个imagepath(图片路径)。原来它是相对于.css文件所在的文件夹，也就是调用css文件夹下的子文件夹来获取路径地址，
+                通过浏览器调试,可以看到浏览器获取路径是从css下面的img来找我的图片的，但是 我的img和css是平级的文件夹，就是说css下面是没有img这个文件夹存在的，所以浏览器当然报错了，因为根本找不到嘛 简单点说，就是假如我文件夹下有一个index.html，它要调用index.html所在的一个子文件夹css下的style.css文件，背景图片存放在与css文件夹同级的img文件夹下，于是乎，这里的CSS应该这样写： background:url(../img/ph6.jpg)
+                ;
+                <br>
+                <img src="picture/cw.jpg" alt="" style="height: 200px; width: 200px">
+            </div>
+            <div class="panel-footer" style="text-align: center">
+                <p>Design by jiegiser <a href="http://www.jiegiser.win" target="_blank">jiegiser</a>jiegiser</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
