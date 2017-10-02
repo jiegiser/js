@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -50,7 +52,7 @@
     </style>
     <script type="text/javascript">
         window.onload = function() {
-            var oP = document.getElementById('btn');
+            var oP = document.getElementById('btn1');
             var oUl = document.getElementById('ul1');
 
             oP.onclick = function() {
@@ -66,19 +68,28 @@
 </head>
 
 <body>
-
-    <div id="box">
-        <p id="btn">输入法</p>
-        <ul id="ul1" style="display:block;">
-            <li><a href="#">手写</a></li>
-            <li><a href="#">拼音</a></li>
-            <li><a href="#">关闭</a></li>
-        </ul>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel panel-heading panel-primary el-icon-circle-check">第四节，onload事件<button class="btn btn-default" style="float: right; padding: 2px 10px;"><a href="index.html">首页</a></button></div>
+            <div class="panel-body" style="height: 800px">
+                <div id="box">
+                    <p id="btn1">输入法</p>
+                    <ul id="ul1" style="display:block;">
+                        <li><a href="#">手写</a></li>
+                        <li><a href="#">拼音</a></li>
+                        <li><a href="#">关闭</a></li>
+                    </ul>
+                </div>
+                <br/>
+                <hr>
+                <div class="panel panel-heading panel-primary">函数解释:</div>
+                <hr> 首先是获取到”输入法“的元素，然后使用判断语句进行控制，需要注意的是==是判断语句，=是赋值语句
+            </div>
+            <div class="panel-footer" style="text-align: center">
+                Design by jiegiser
+            </div>
+        </div>
     </div>
-    <div>函数解释
-        <p>首先是获取到”输入法“的元素，然后使用判断语句进行控制，需要注意的是==是判断语句，=是赋值语句</p>
-    </div>
-
 </body>
 
 </html>
