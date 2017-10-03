@@ -88,10 +88,11 @@
                 <hr>
                 <strong>所用函数</strong> <br>
                 <hr> window.onload = function() <br> { var oP = document.getElementById('btn1'); <br> var oUl = document.getElementById('ul1');
-                <br> oP.onclick = function()
-                <br> { if (oUl.style.display == 'block')
+                <br> oP.onclick = function()//给p标签添加点击事件
+                <br> { if (oUl.style.display == 'block')//进行判断是否为显示的
                 <br> { oUl.style.display = 'none'; }
                 <br> else //none { oUl.style.display = 'block'; } }; };
+                <hr> 其中window.onload = function()函数是在页面加载完成后，执行里面的内容。<br> 如果菜单是显示的，我们点击将他影藏，若影藏，点击设置为显示。
             </div>
             <div class="panel-footer" style="text-align: center">
                 Design by jiegiser
