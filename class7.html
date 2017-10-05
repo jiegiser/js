@@ -12,10 +12,10 @@
 
 <body>
 
-    <div class="container" style="height: 1200px">
+    <div class="container">
         <div class="panel panel-primary">
             <div class="panel panel-heading panel-primary el-icon-circle-check">第二节，鼠标的onmouseout，onmousemove事件改变div的样式<button class="btn btn-default" style="float: right; padding: 2px 10px;"><a href="index.html">首页</a></button></div>
-            <div class="panel-body" style="height: 800px">
+            <div class="panel-body" style="height: 1200px">
 
                 <table id="taobao_table">
                     <thead>
@@ -80,10 +80,12 @@
                 <br/>
                 <hr>
                 <div class="panel panel-heading panel-primary">函数解释:</div>
-                <hr> 使用 onmouseover="toGreen()" onmouseout="toRed()"，调用toGreen()以及toRed()函数，
-                <br> 这里个函数 function toGreen() { var oDiv1 = document.getElementById('div1'); oDiv1.style.width = '200px;'; oDiv1.style.height = '200px'; oDiv1.style.background = 'green'; } function toRed() { var oDiv1 = document.getElementById('div1');
-                oDiv1.style.width = '100px'; oDiv1.style.height = '100px'; oDiv1.style.background = 'red'; }
-                <br> 用于改变div的颜色以及大小
+                <hr> 使用的js函数
+                <hr> window.onload=function ()
+                <hr> {
+                <hr> 加id的方法，有可能失灵，我们怎么使用js方法来实现全部选取所有的Input标签
+                <hr> 提示：使用getElementByTagName方法。
+                <hr> }
                 <strong>注意：id的样式的优先级一定大于clsaa的优先级</strong>
                 <hr> 可以将我们在标签中添加的事件放在head标签中写一个script标签中，不用将函数放在行间中。
             </div>
