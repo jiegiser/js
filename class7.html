@@ -83,11 +83,17 @@
                 <hr> 使用的js函数
                 <hr> window.onload=function ()
                 <hr> {
-                <hr> 加id的方法，有可能失灵，我们怎么使用js方法来实现全部选取所有的Input标签
-                <hr> 提示：使用getElementByTagName方法。
-                <hr> }
-                <strong>注意：id的样式的优先级一定大于clsaa的优先级</strong>
-                <hr> 可以将我们在标签中添加的事件放在head标签中写一个script标签中，不用将函数放在行间中。
+                <hr> 我们可以使用加id的方法，但是有可能失灵，我们怎么使用js方法来实现全部选取所有的Input标签
+                <hr> 提示：使用getElementByTagName方法。 var aInput=getElementByTagName('input');
+                <hr> obt.onclick=function (){}
+                <hr> for(i=0;i
+                <=aInput.length;i++)<hr>
+                    {
+                    <hr> aInput[i].check=true;
+                    <hr> }
+                    <hr> 这里使用for循环。
+                    <hr> }
+
             </div>
             <div class="panel-footer" style="text-align: center">
                 <p>Design by jiegiser <a href="http://www.jiegiser.win" target="_blank">jiegiser</a>jiegiser</p>
